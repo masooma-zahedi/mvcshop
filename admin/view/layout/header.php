@@ -296,13 +296,14 @@
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
-                            <span>PhoneBook</span>
+                            <span>menu</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
                             <li><a class="" href="dashbord.php?contact=list">list</a></li>
                             <li><a class="" href="dashbord.php?contact=add">add</a></li>
-                            <li><a class="" href="dashbord.php?contact=search">search</a></li>
+                            <li><a class="" href="dashbord.php?contact=search">edit</a></li>
+                            <li><a class="" href="dashbord.php?contact=search">delete</a></li>
                         </ul>
                     </li>
         

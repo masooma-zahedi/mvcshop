@@ -1,4 +1,6 @@
 <?php
-// require_once "../public/include/config.php";
-// require_once "./model/Mindex.php";
-require_once "view/Vindex.php";
+require_once "model/Mprocat.php";
+$class = new procat;
+
+$procat = $class->procat_list();
+require_once "view/procat/list.php";
