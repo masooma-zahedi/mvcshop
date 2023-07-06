@@ -1,5 +1,5 @@
 <section id="main-content">
           <section class="wrapper">
-            himasooma
+            <h1>Welcome to Admin Page</h1>
           </section>
 </section>
