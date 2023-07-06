@@ -17,7 +17,7 @@
                         <tr>
                             <td><?php echo $value['id'] ?></td>
                             <td><?php echo $value['title'] ?></td>
-                            <td><button class="btn btn-primary btn-xs">Add</button></td>
+                            <td><a href="index.php?c=procat&a=add" class="btn btn-primary btn-xs">Add</a></td>
                             <td><button class="btn btn-warning btn-xs"><i class="icon-pencil"></i></button></td>
                             <td><button class="btn btn-danger btn-xs"><i class="icon-trash "></i></button></td>
                         </tr>
