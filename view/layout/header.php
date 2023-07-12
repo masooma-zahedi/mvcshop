@@ -1,5 +1,6 @@
 <?php 
-require_once "public/config.php"
+require_once "public/config.php";
+require_once "controller/Cprocat.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +72,7 @@ require_once "public/config.php"
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0 ">
                 <a href="index.html" class="navbar-brand d-block d-lg-none">
                     <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
                 </a>
@@ -83,7 +84,13 @@ require_once "public/config.php"
                         <h1 class="m-0 display-4 text-danger"><span class="text-secondary">i</span>CREAM</h1>
                     </a>
                     <div class="navbar-nav ml-auto py-0 pe-3">
-                        <a href="index.html" class="nav-item nav-link">Homehh</a>
+                        <?php
+                            $show_menu = $class->promaincat_list_showmenu();
+                            // var_dump($show_menu);
+                            foreach($show_menu as $val):
+                        ?>
+                        <a href="index.html" class="nav-item nav-link <?php if($val['title'] == "home"){ echo "active";};?>"><?php echo $val['title'] ?></a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </nav>

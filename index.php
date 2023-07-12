@@ -1,5 +1,5 @@
 <?php 
-// require_once "public/include/config.php"
+// require_once "public/include/config.php";
 
 require_once "view/layout/header.php";
 

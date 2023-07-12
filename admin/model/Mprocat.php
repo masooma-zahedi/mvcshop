@@ -1,4 +1,8 @@
 <?php
+// die("model is on");
+
+use function PHPSTORM_META\type;
+
 class procat{
     private $db;
     public function __construct()
@@ -12,6 +16,7 @@ class procat{
         $rows = $sth->fetchAll();
         return $rows;
     }
+
     public function procat_sub($chid){
         $sth = $this->db->query("SELECT * FROM procat_tbl WHERE id= '$chid'");
     }
@@ -22,6 +27,11 @@ class procat{
     public function promaincat_list(){
         $results = $this->db->query("SELECT * FROM procat_tbl WHERE chid ='0'");
         return $results;
+    }
+    public function promaincat_list_showmenu(){
+        $results = $this->db->query("SELECT * FROM procat_tbl WHERE chid ='0'");
+        $rows = $results->fetchAll();
+        return $rows;
     }
     public function procat_delete($id){
         $this->db->query("DELETE FROM procat_tbl WHERE id='$id'");
