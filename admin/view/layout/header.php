@@ -122,24 +122,34 @@
             <div id="sidebar" class="nav-collapse ">
                 <!-- sidebar menu start-->
 				<br/><br/>
-                <ul class="sidebar-menu">
+                <ul class="sidebar-menu">                   
                     <li class="active">
                         <a class="" href="index.php?c=index&a=index">
                             <i class="icon-dashboard"></i>
-                            <span>main page</span>
+                            <span>Main Page</span>
                         </a>
                     </li>
+
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
-                            <span>menu</span>
+                            <span>Menu</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
                             <li><a class="" href="index.php?c=procat&a=list">list</a></li>
                             <li><a class="" href="index.php?c=procat&a=add">add</a></li>
-                            <li><a class="" href="dashbord.php?contact=search">edit</a></li>
-                            <li><a class="" href="dashbord.php?contact=search">delete</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>Services</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="index.php?c=services&a=list">list</a></li>
+                            <li><a class="" href="index.php?c=services&a=add">add</a></li>
                         </ul>
                     </li>
         
