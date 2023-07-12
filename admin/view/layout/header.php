@@ -26,9 +26,7 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
-
     <section id="container" class="">
         <!--header start-->
         <header class="header white-bg">
@@ -102,7 +100,6 @@
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <img alt="" src="img/avatar1_small.jpg">
                             <span class="username">
-                                <!-- <?php echo $_SESSION['name']; ?> -->
                             </span>
                             <b class="caret"></b>
                         </a>

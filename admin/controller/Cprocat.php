@@ -19,5 +19,15 @@ switch ($action){
         $class->procat_delete($id);?>
         <script><?php echo("location.href = 'index.php?c=procat&a=list';");?></script><?php
         break;
+    case "edit":
+        $id = $_GET["id"];
+        $showInfo=$class->procat_showEdit($id);
+        $promaincat = $class->promaincat_list();
+        if($_POST){
+            $data = $_POST['frm'];
+            $class->procat_edit($data,$id);?>
+            <script><?php echo("location.href = 'index.php?c=procat&a=list';");?></script><?php
+        }
+        break;
 }
 require_once "view/".$controller."/".$action.".php";
