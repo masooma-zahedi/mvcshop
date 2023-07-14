@@ -19,8 +19,8 @@ class services{
     //     $sth = $this->db->query("SELECT * FROM services_tbl WHERE id= '$chid'");
     // }
     // // working on this*******************************************************************
-    public function services_add($data){
-        $this->db->query("INSERT INTO services_tbl (title,description,link) VALUES ('$data[title]','$data[description]','$data[link]')");
+    public function services_add($data,$to){
+        $this->db->query("INSERT INTO services_tbl (title,description,link,img) VALUES ('$data[title]','$data[description]','$data[link]','$to')");
     }
     // public function services_list(){
     //     $results = $this->db->query("SELECT * FROM services_tbl");

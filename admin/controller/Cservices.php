@@ -8,10 +8,21 @@ switch ($action){
         // var_dump($services);
         break;
     case "add":
-        // $promaincat = $class->services_list();
         if($_POST){
             $data = $_POST['frm'];
-            $services = $class->services_add($data);
+            $file = $_FILES['img'];
+            // echo $file['name']."<br>";
+            $array= explode(".",$file['name']);
+            // var_dump($array);
+            $newname ='ser.'. rand().".".end($array);
+            // echo $newname;
+            $from = $file['tmp_name'];
+            // echo $from;
+            $to = "../public/uploader/".$newname;
+            // echo $to;
+            move_uploaded_file($from,$to);
+
+            $services = $class->services_add($data,$to);
         }
         break;
     case "delete":
