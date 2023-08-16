@@ -1,3 +1,10 @@
+<?php
+    require_once "controller/Cservices.php"
+?>
+
+
+
+
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5">
@@ -9,7 +16,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
                             <h1 class="display-3 text-white mb-md-4">Traditional Ice Cream Since 1950</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More hi</a>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More hiee</a>
                         </div>
                     </div>
                 </div>
@@ -133,46 +140,23 @@
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel service-carousel">
+
+                        <?php 
+                            $ser = $class->services_list();
+                            foreach($ser as $serval):
+                        ?>
                         <div class="service-item">
                             <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3"  src="public/default/img/service-1.jpg" style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3"  src="<?php echo $serval["img"] ?>" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Quality Maintain</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5"><?php echo $serval['title'] ?></h5>
+                                <p><?php echo $serval['description'] ?></p>
+                                <a href="<?php echo $serval["link"] ?>" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
                             </div>
                         </div>
-                        <div class="service-item">
-                            <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3"  src="public/default/img/service-2.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Individual Approach</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3"  src="public/default/img/service-3.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Celebration Ice Cream</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3"  src="public/default/img/service-4.jpg" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
-                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Delivery To Any Point</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo</p>
-                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </div>
@@ -185,10 +169,19 @@
     <div class="container-fluid my-5 py-5 px-0">
         <div class="row justify-content-center m-0">
             <div class="col-lg-5">
-                <h1 class="section-title position-relative text-center mb-5">Delicious Ice Cream Made From Our Very Own Organic Milk</h1>
+                <h1 class="section-title position-relative text-center mb-5">These designs are original creations of The Empty Vase of Houston</h1>
             </div>
         </div>
         <div class="row m-0 portfolio-container">
+
+
+
+
+
+
+
+
+
             <div class="col-lg-4 col-md-6 p-0 portfolio-item">
                 <div class="position-relative overflow-hidden">
                     <img class="img-fluid w-100"  src="public/default/img/portfolio-1.jpg" alt="">
@@ -197,6 +190,16 @@
                     </a>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
             <div class="col-lg-4 col-md-6 p-0 portfolio-item">
                 <div class="position-relative overflow-hidden">
                     <img class="img-fluid w-100"  src="public/default/img/portfolio-2.jpg" alt="">

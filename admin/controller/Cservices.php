@@ -11,18 +11,13 @@ switch ($action){
         if($_POST){
             $data = $_POST['frm'];
             $file = $_FILES['img'];
-            // echo $file['name']."<br>";
             $array= explode(".",$file['name']);
-            // var_dump($array);
             $newname ='ser.'. rand().".".end($array);
-            // echo $newname;
             $from = $file['tmp_name'];
-            // echo $from;
-            $to = "../public/uploader/".$newname;
-            // echo $to;
+            $to = "../public/uploader/services/".$newname;
             move_uploaded_file($from,$to);
-
-            $services = $class->services_add($data,$to);
+            $to1 = "./public/uploader/services/".$newname;
+            $services = $class->services_add($data,$to1);
         }
         break;
     case "delete":

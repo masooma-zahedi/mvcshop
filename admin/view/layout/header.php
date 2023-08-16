@@ -152,6 +152,17 @@
                             <li><a class="" href="index.php?c=services&a=add">add</a></li>
                         </ul>
                     </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>Portfolio</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="index.php?c=portfolio&a=list">list</a></li>
+                            <li><a class="" href="index.php?c=portfolio&a=add">add</a></li>
+                        </ul>
+                    </li>
         
 
 

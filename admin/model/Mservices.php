@@ -1,6 +1,4 @@
 <?php
-// die("model is on");
-
 
 class services{
     private $db;
