@@ -19,6 +19,11 @@
     <!-- Custom styles for this template -->
     <link href="../public/admin/css/style.css" rel="stylesheet">
     <link href="../public/admin/css/style-responsive.css" rel="stylesheet" />
+    <style>
+        #portimg{
+            border: 5px solid red !important;
+        }
+    </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>

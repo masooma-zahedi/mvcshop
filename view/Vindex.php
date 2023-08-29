@@ -1,5 +1,6 @@
 <?php
-    require_once "controller/Cservices.php"
+    include_once "controller/Cportfolio.php";
+    require_once "controller/Cservices.php";
 ?>
 
 
@@ -143,6 +144,7 @@
 
                         <?php 
                             $ser = $class->services_list();
+                            // var_dump($ser).die;
                             foreach($ser as $serval):
                         ?>
                         <div class="service-item">
@@ -173,73 +175,20 @@
             </div>
         </div>
         <div class="row m-0 portfolio-container">
-
-
-
-
-
-
-
-
-
+            <?php 
+                 $port = $classP->portfolio_list();
+                 foreach($port as $port):
+            ?>
             <div class="col-lg-4 col-md-6 p-0 portfolio-item">
-                <div class="position-relative overflow-hidden">
-                    <img class="img-fluid w-100"  src="public/default/img/portfolio-1.jpg" alt="">
+                <div class="position-relative overflow-hidden "style="height: 350px" id="portimg" >
+                    <img class="img-fluid w-100 h-100"  src="<?php echo $port['img'] ?>" alt="">
                     <a class="portfolio-btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">
                         <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
                     </a>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
-                <div class="position-relative overflow-hidden">
-                    <img class="img-fluid w-100"  src="public/default/img/portfolio-2.jpg" alt="">
-                    <a class="portfolio-btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
-                <div class="position-relative overflow-hidden">
-                    <img class="img-fluid w-100"  src="public/default/img/portfolio-3.jpg" alt="">
-                    <a class="portfolio-btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
-                <div class="position-relative overflow-hidden">
-                    <img class="img-fluid w-100"  src="public/default/img/portfolio-4.jpg" alt="">
-                    <a class="portfolio-btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
-                <div class="position-relative overflow-hidden">
-                    <img class="img-fluid w-100"  src="public/default/img/portfolio-5.jpg" alt="">
-                    <a class="portfolio-btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
-                <div class="position-relative overflow-hidden">
-                    <img class="img-fluid w-100"  src="public/default/img/portfolio-6.jpg" alt="">
-                    <a class="portfolio-btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
-                    </a>
-                </div>
-            </div>
+            
+             <?php endforeach;?>
         </div>
     </div>
     <!-- Portfolio End -->

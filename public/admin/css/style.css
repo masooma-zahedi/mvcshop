@@ -3939,3 +3939,6 @@ span.customSelect.changed {
 	display:block;
 	margin:30px auto 0;
 	}
+    .img-fluid{
+        height: 900px;
+    }
