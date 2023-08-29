@@ -14,9 +14,9 @@ switch ($action){
             $array= explode(".",$file['name']);
             $newname ='ser.'. rand().".".end($array);
             $from = $file['tmp_name'];
-            $to = "../public/uploader/services/".$newname;
+            $to = "../public/uploader/$_GET[c]/".$newname;
             move_uploaded_file($from,$to);
-            $to1 = "./public/uploader/services/".$newname;
+            $to1 = "./public/uploader/$_GET[c]/".$newname;
             $services = $class->services_add($data,$to1);
         }
         break;

@@ -12,11 +12,11 @@ switch ($action){
             $data = $_POST['frm'];
             $file = $_FILES['img'];
             $array= explode(".",$file['name']);
-            $newname ='ser.'. rand().".".end($array);
+            $newname ='port.'. rand().".".end($array);
             $from = $file['tmp_name'];
-            $to = "../public/uploader/portfolio/".$newname;
+            $to = "../public/uploader/$_GET[c]/".$newname;
             move_uploaded_file($from,$to);
-            $to1 = "./public/uploader/portfolio/".$newname;
+            $to1 = "./public/uploader/$_GET[c]/".$newname;
             $portfolio = $class->portfolio_add($data,$to1);
         }
         break;

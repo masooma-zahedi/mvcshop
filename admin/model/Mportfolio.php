@@ -1,5 +1,5 @@
 <?php
-
+// die("this is portfolio");
 class portfolio{
     private $db;
     public function __construct()
@@ -25,7 +25,7 @@ class portfolio{
         return $res;
     }
     public function portfolio_edit($data,$id){
-        $this->db->query("UPDATE portfolio_tbl set title='$data[title]', description='$data[description]', link='$data[link]' WHERE id= '$id'");
+        $this->db->query("UPDATE portfolio_tbl set title='$data[title]', description='$data[description]', link='$data[link]',img='$data[img]'  WHERE id= '$id'");
     }
 
 
