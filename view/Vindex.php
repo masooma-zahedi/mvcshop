@@ -182,7 +182,7 @@
             <div class="col-lg-4 col-md-6 p-0 portfolio-item">
                 <div class="position-relative overflow-hidden "style="height: 350px" id="portimg" >
                     <img class="img-fluid w-100 h-100"  src="<?php echo $port['img'] ?>" alt="">
-                    <a class="portfolio-btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                    <a class="portfolio-btn" href="<?php echo $port['img'] ?>" data-lightbox="portfolio">
                         <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
                     </a>
                 </div>
