@@ -1,7 +1,6 @@
 <?php
-// die("this is portfolio");
 class portfolio{
-    private $db;
+    private $db; 
     public function __construct()
     {
         global $db;

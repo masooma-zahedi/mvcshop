@@ -1,7 +1,6 @@
 <?php
 require_once "model/Mportfolio.php";
 $class = new portfolio();
-
 switch ($action){
     case "list":
         $portfolio = $class->portfolio_list();
