@@ -10,7 +10,6 @@ switch($action){
         if($_POST){
             $data = $_POST['frm'];
             $file = $_FILES;
-            // var_dump($file['img']['name']).die;
             $array = explode(".",$file['img']['name']);
             $newName = "client.".rand().".".end($array);
             $from = $file['img']['tmp_name'];

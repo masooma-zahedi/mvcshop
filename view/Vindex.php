@@ -1,6 +1,7 @@
 <?php
     include_once "controller/Cportfolio.php";
     require_once "controller/Cservices.php";
+    require_once "controller/Cclientsay.php";
 ?>
 
 
@@ -351,27 +352,20 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="owl-carousel testimonial-carousel">
+
+                        <?php
+                            $clientsay = $classClient->clientsay_list();
+                            foreach($clientsay as $client):
+                        ?>
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3"  src="public/default/img/testimonial-1.jpg" alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <h4 class="font-weight-light mb-4"><?php echo $client['description'] ?></h4>
+                            <img class="img-fluid mx-auto mb-3"  src="<?php echo $client['img'] ?>" alt="">
+                            <h5 class="font-weight-bold m-0"><?php echo $client['name'] ?></h5>
                             <span>Profession</span>
                         </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3"  src="public/default/img/testimonial-2.jpg" alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3"  src="public/default/img/testimonial-3.jpg" alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </div>
