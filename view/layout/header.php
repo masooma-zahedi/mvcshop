@@ -89,7 +89,7 @@ require_once "controller/Cprocat.php"
                             // var_dump($show_menu);
                             foreach($show_menu as $val):
                         ?>
-                        <a href="index.html" class="nav-item nav-link <?php if($val['title'] == "home"){ echo "active";};?>"><?php echo $val['title'] ?></a>
+                        <a href="<?php echo $val['link'] ?>" class="nav-item nav-link <?php if($val['title'] == "home"){ echo "active";};?>"><?php echo $val['title'] ?></a>
                         <?php endforeach; ?>
                     </div>
                 </div>
