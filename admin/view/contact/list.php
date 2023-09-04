@@ -4,26 +4,22 @@
         <table class="table table-striped table-advance table-hover">
             <thead class=" mt-5">
                 <tr>
-                    <th>id</th>
                     <th>name</th>
-                    <th>description</th>
-                    <th>img</th>
-                    <!-- <th>link</th> -->
-                    <th>edit</th>
+                    <th>email</th>
+                    <th>title</th>
+                    <th>message</th>
                     <th>delete</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                foreach ($clientlist as $value) : ?>
+                foreach ($contactlist as $value) : ?>
                         <tr>
-                            <td><?php echo $value['id'] ?></td>
                             <td><?php echo $value['name'] ?></td>
-                            <td><?php echo $value['description'] ?></td>
-                            <td><img src=<?php echo ".".$value['img'] ?> alt=<?php echo $value['img'] ?> width="50px" class="rounded "></td>
-                            <!-- <td><?php //echo $value['link'] ?></td> -->
-                            <td><a href="index.php?c=clientsay&a=edit&id=<?php echo $value['id'] ?>" class="btn btn-warning btn-xs"><i class="icon-pencil"></i></a></td>
-                            <td><a href="index.php?c=clientsay&a=delete&id=<?php echo $value['id'] ?>" class="btn btn-danger btn-xs"><i class="icon-trash "></i></a></td>
+                            <td><?php echo $value['email'] ?></td>
+                            <td><?php echo $value['title'] ?></td>
+                            <td><?php echo $value['massage'] ?></td>
+                            <td><a href="index.php?c=contact&a=delete&id=<?php echo $value['id'] ?>" class="btn btn-danger btn-xs"><i class="icon-trash "></i></a></td>
                         </tr>
 
                     <?php endforeach; ?>
