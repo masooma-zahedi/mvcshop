@@ -92,15 +92,7 @@ require_once "controller/Cabout.php";
     <div class="row bg-primary m-0">
         <div class="col-md-6 px-0" style="min-height: 500px;">
             <div class="position-relative h-100">
-                <!-- <div class="col-md-6" style="min-height: 400px;"> -->
-                    <iframe class="position-absolute w-100 h-100"  src="https://www.youtube.com/embed/N_61_oXmfvQ?si=piuwfrw1_tyf4gih" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <!-- </div> -->
-
-                <!-- <img class="position-absolute w-100 h-100"  src="public/default/img/promotion.jpg" style="object-fit: cover;"> -->
-                <!-- <button type="button" class="btn-play" data-toggle="modal"
-                        data- src="public/default/https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                        <span></span>
-                    </button> -->
+                    <iframe class="position-absolute w-100 h-100"  src="public/uploader/video/flower-shop.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
         <div class="col-md-6 py-5 py-md-0 px-0">
