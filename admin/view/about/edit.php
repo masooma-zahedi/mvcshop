@@ -24,7 +24,7 @@
                     <label for="exampleInputEmail1">Image</label>
                     <input type="file" name="img" class="form-control" id="exampleInputEmail1">
                 </div>
-                <button type="submit" name="btn" class="btn btn-info">Add</button>
+                <button type="submit" name="btn" class="btn btn-info">Upload</button>
             </form>
         </div>
     </section>

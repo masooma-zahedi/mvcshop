@@ -211,6 +211,16 @@
                             <li><a class="" href="index.php?c=about&a=edit">upload</a></li>
                         </ul>
                     </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>video</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="index.php?c=video&a=edit">upload</a></li>
+                        </ul>
+                    </li>
         
 
 
