@@ -24,13 +24,8 @@
                     <label for="exampleInputEmail1">Image</label>
                     <input type="file" name="img" class="form-control" id="exampleInputEmail1">
                 </div>
-                <!-- <div class="form-group">
-                    <label for="exampleInputEmail1">Link</label>
-                    <input type="text" name="frm[link]" class="form-control" id="exampleInputEmail1" placeholder="Enter title">
-                </div> -->
                 <button type="submit" name="btn" class="btn btn-info">Add</button>
             </form>
-
         </div>
     </section>
 </section>

@@ -1,26 +1,31 @@
 <section id="main-content">
     <section class="wrapper pt-5">
         <div class="panel-body container" dir="ltr">
-            <form role="form" method="post" action="index.php?c=about&a=edit&id=<?php echo $showInfo['id'] ?>">
+            <form role="form" method="post" action="index.php?c=about&a=edit" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Title Menu</label>
-                    <input type="text" name="frm[title]" class="form-control" id="exampleInputEmail1" value="<?php echo $showInfo['title'] ?>">
+                    <label for="exampleInputEmail1">Subject header</label>
+                    <input type="text" name="frm[headsubject]"  class="form-control" id="exampleInputEmail1" placeholder="Enter subject">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Description</label>
-                    <input type="text" name="frm[description]" class="form-control" id="exampleInputEmail1" value="<?php echo $showInfo['description'] ?>">
+                <div class="mb-3 border border-primary p-2">
+                    <label for="exampleInputEmail1" class="form-label">Content About </label>
+                    <textarea name="frm[contentabout]"  id="editor1" ></textarea>
+                    <script>
+                        CKEDITOR.replace('editor1');
+                    </script>
+                </div>
+                <div class="mb-3 border border-primary p-2">
+                    <label for="exampleInputEmail1" class="form-label">Content Feature </label>
+                    <textarea name="frm[contentfeature]" id="editor2"></textarea>
+                    <script>
+                        CKEDITOR.replace('editor2');
+                    </script>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Image</label>
-                    <input type="file" name="frm[img]" class="form-control" id="exampleInputEmail1" value="<?php echo $showInfo['img'] ?>" >
+                    <input type="file" name="img" class="form-control" id="exampleInputEmail1">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Link</label>
-                    <input type="text" name="frm[link]" class="form-control" id="exampleInputEmail1" value="<?php echo $showInfo['link'] ?>">
-                </div>
-                <button type="submit" name="btn" class="btn btn-info">Edit</button>
+                <button type="submit" name="btn" class="btn btn-info">Add</button>
             </form>
-                           
         </div>
     </section>
 </section>

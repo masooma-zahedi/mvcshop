@@ -208,7 +208,7 @@
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
-                            <li><a class="" href="index.php?c=about&a=list">list</a></li>
+                            <li><a class="" href="index.php?c=about&a=edit">edit</a></li>
                             <li><a class="" href="index.php?c=about&a=add">add</a></li>
                         </ul>
                     </li>
