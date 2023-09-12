@@ -42,8 +42,8 @@ class setting{
     //     $row = $sth->fetch(PDO::FETCH_ASSOC);
     //     return $row;
     // }
-    public function setting_edit($data,$id){
-        $this->db->query("UPDATE setting_tbl set title='$data[title]', description='$data[description]', link='$data[link]' WHERE id= '$id'");
+    public function setting_edit($data,$id,$to){
+        $this->db->query("UPDATE setting_tbl set titleSite='$data[titleSite]', descriptionSite='$data[descriptionSite]', hero_img='$to', email='$data[email]', phone='$data[phone]', address='$data[address]', facebook='$data[facebook]', twitter='$data[twitter]', youtube='$data[youtube]', instagram='$data[instagram]' WHERE id= '$id'");
     }
 
 
