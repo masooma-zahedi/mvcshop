@@ -171,7 +171,7 @@
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
-                            <span>clientsay</span>
+                            <span>Clientsay</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
@@ -182,7 +182,7 @@
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
-                            <span>contact</span>
+                            <span>Contact</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
@@ -193,7 +193,7 @@
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
-                            <span>employee</span>
+                            <span>Employee</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
@@ -204,7 +204,7 @@
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
-                            <span>about</span>
+                            <span>About</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
@@ -214,11 +214,22 @@
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
-                            <span>video</span>
+                            <span>Video</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub">
                             <li><a class="" href="index.php?c=video&a=edit">upload</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>Setting</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="index.php?c=setting&a=list">list</a></li>
+                            <li><a class="" href="index.php?c=setting&a=add">add</a></li>
                         </ul>
                     </li>
         
