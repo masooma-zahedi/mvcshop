@@ -229,7 +229,7 @@
                         </a>
                         <ul class="sub">
                             <li><a class="" href="index.php?c=setting&a=list">list</a></li>
-                            <li><a class="" href="index.php?c=setting&a=add">add</a></li>
+                            <!-- <li><a class="" href="index.php?c=setting&a=add">add</a></li> -->
                         </ul>
                     </li>
         

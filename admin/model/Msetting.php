@@ -12,36 +12,17 @@ class setting{
         $rows = $sth->fetchAll();
         return $rows;
     }
-
-    // public function setting_sub($chid){
-    //     $sth = $this->db->query("SELECT * FROM setting_tbl WHERE id= '$chid'");
+    // public function setting_add($data,$to){
+    //     $this->db->query("INSERT INTO setting_tbl (titleSite,descriptionSite,hero_img,email,phone,address,facebook,twitter,youtube,instagram) VALUES ('$data[titleSite]','$data[descriptionSite]','$to','$data[email]','$data[phone]','$data[address]','$data[facebook]','$data[twitter]','$data[youtube]','$data[instagram]')");
     // }
-    // // working on this*******************************************************************
-    public function setting_add($data,$to){
-        $this->db->query("INSERT INTO setting_tbl (titleSite,descriptionSite,hero_img,email,phone,address,facebook,twitter,youtube,instagram) VALUES ('$data[titleSite]','$data[descriptionSite]','$to','$data[email]','$data[phone]','$data[address]','$data[facebook]','$data[twitter]','$data[youtube]','$data[instagram]')");
-    }
-    // public function setting_list(){
-    //     $results = $this->db->query("SELECT * FROM setting_tbl");
-    //     return $results;
+    // public function setting_delete($id){
+    //     $this->db->query("DELETE FROM setting_tbl WHERE id='$id'");
     // }
-    // public function promaincat_list_showmenu(){
-    //     $results = $this->db->query("SELECT * FROM setting_tbl WHERE chid ='0'");
-    //     $rows = $results->fetchAll();
-    //     return $rows;
-    // }
-    public function setting_delete($id){
-        $this->db->query("DELETE FROM setting_tbl WHERE id='$id'");
-    }
     public function setting_showEdit($id){
         $results =$this->db->query("SELECT * FROM setting_tbl WHERE id= '$id'");
         $res = $results->fetch(PDO::FETCH_ASSOC);
         return $res;
     }
-    // public function setting_showcat($chid){
-    //     $sth = $this->db->query("SELECT * FROM setting_tbl WHERE id='$chid'");
-    //     $row = $sth->fetch(PDO::FETCH_ASSOC);
-    //     return $row;
-    // }
     public function setting_edit($data,$id,$to){
         $this->db->query("UPDATE setting_tbl set titleSite='$data[titleSite]', descriptionSite='$data[descriptionSite]', hero_img='$to', email='$data[email]', phone='$data[phone]', address='$data[address]', facebook='$data[facebook]', twitter='$data[twitter]', youtube='$data[youtube]', instagram='$data[instagram]' WHERE id= '$id'");
     }

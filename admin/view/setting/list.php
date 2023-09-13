@@ -15,8 +15,8 @@
                     <th>twitter</th>
                     <th>youtube</th>
                     <th>instagram</th>
-                    <th>edit</th>
-                    <th>delete</th>
+                    <th>update</th>
+                    <!-- <th>delete</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +35,7 @@
                             <td><?php echo $value['youtube'] ?></td>
                             <td><?php echo $value['instagram'] ?></td>
                             <td><a href="index.php?c=setting&a=edit&id=<?php echo $value['id'] ?>" class="btn btn-warning btn-xs"><i class="icon-pencil"></i></a></td>
-                            <td><a href="index.php?c=setting&a=delete&id=<?php echo $value['id'] ?>" class="btn btn-danger btn-xs"><i class="icon-trash "></i></a></td>
+                            <!-- <td><a href="index.php?c=setting&a=delete&id=<?php echo $value['id'] ?>" class="btn btn-danger btn-xs"><i class="icon-trash "></i></a></td> -->
                         </tr>
 
                     <?php endforeach; ?>

@@ -1,16 +1,18 @@
 <?php 
 require_once "public/config.php";
-require_once "controller/Cprocat.php"
+require_once "controller/Cprocat.php";
+require_once "controller/Csetting.php";
+$setting = $classSet->setting_list()[0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>iCREAM - Ice Cream Shop Website Template</title>
+    <title><?php echo $setting["titleSite"] ?></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="<?php echo $setting['descriptionSite'] ?>" name="description">
 
     <!-- Favicon -->
     <link href="public/default/img/favicon.ico" rel="icon">
@@ -46,19 +48,19 @@ require_once "controller/Cprocat.php"
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-white px-3" href="">
+                        <a class="text-white px-3" href="<?php echo $setting['facebook'] ?>">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="text-white px-3" href="">
+                        <a class="text-white px-3" href="<?php echo $setting['twitter'] ?>">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="text-white px-3" href="">
+                        <!-- <a class="text-white px-3" href="<?php echo $setting['facebook'] ?>">
                             <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="text-white px-3" href="">
+                        </a> -->
+                        <a class="text-white px-3" href="<?php echo $setting['instagram'] ?>">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="text-white pl-3" href="">
+                        <a class="text-white pl-3" href="<?php echo $setting['youtube'] ?>">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
