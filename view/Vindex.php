@@ -204,7 +204,7 @@ require_once "controller/CheroSlider.php";
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6">
-                <h1 class="section-title position-relative mb-5">Best Prices We Offer For Ice Cream Lovers</h1>
+                <h1 class="section-title position-relative mb-5"><?php echo $classSet->setting_list()[0]['desc_bestOfer'] ?></h1>
             </div>
             <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
         </div>

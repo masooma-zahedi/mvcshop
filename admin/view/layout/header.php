@@ -243,6 +243,17 @@
                             <li><a class="" href="index.php?c=heroSlider&a=add">add</a></li>
                         </ul>
                     </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>BestOfer</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="index.php?c=bestOfer&a=list">list</a></li>
+                            <li><a class="" href="index.php?c=bestOfer&a=add">add</a></li>
+                        </ul>
+                    </li>
         
 
 
