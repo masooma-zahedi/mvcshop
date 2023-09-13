@@ -1,11 +1,11 @@
 <?php
-require_once "model/MbestOfer.php";
-$class = new bestOfer();
+require_once "model/MbestOffer.php";
+$class = new bestOffer();
 
 switch ($action){
     case "list":
-        $bestOfer = $class->bestOfer_list();
-        // var_dump($bestOfer);
+        $bestOffer = $class->bestOffer_list();
+        // var_dump($bestOffer);
         break;
     case "add":
         if($_POST){
@@ -17,17 +17,17 @@ switch ($action){
             $to = "../public/uploader/$_GET[c]/".$newname;
             move_uploaded_file($from,$to);
             $to1 = "./public/uploader/$_GET[c]/".$newname;
-            $bestOfer = $class->bestOfer_add($data,$to1);
+            $bestOffer = $class->bestOffer_add($data,$to1);
         }
         break;
     case "delete":
         $id = $_GET["id"];
-        $class->bestOfer_delete($id);?>
-        <script><?php echo("location.href = 'index.php?c=bestOfer&a=list';");?></script><?php
+        $class->bestOffer_delete($id);?>
+        <script><?php echo("location.href = 'index.php?c=bestOffer&a=list';");?></script><?php
         break;
     case "edit":
         $id = $_GET["id"];
-        $showInfo=$class->bestOfer_showEdit($id);
+        $showInfo=$class->bestOffer_showEdit($id);
         if($_POST){
             $data = $_POST['frm'];
             if(strlen($_FILES['img']['name']) > 0){
@@ -41,10 +41,10 @@ switch ($action){
             }else{
                 $to1 = $showInfo['img'];
             }
-            $class->bestOfer_edit($data,$to1,$id);
+            $class->bestOffer_edit($data,$to1,$id);
             ?>
             <script>
-                <?php echo("location.href = 'index.php?c=bestOfer&a=list'");?>
+                <?php echo("location.href = 'index.php?c=bestOffer&a=list'");?>
             </script><?php
            
         }
