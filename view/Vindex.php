@@ -6,6 +6,7 @@ require_once "controller/Cemployee.php";
 require_once "controller/Cabout.php";
 require_once "controller/Cvideo.php";
 require_once "controller/Csetting.php";
+require_once "controller/CheroSlider.php";
 ?>
 
 
@@ -14,28 +15,27 @@ require_once "controller/Csetting.php";
 
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5 pb-5">
+    <?php //$heroSlider = $classheroSlider->heroSlider_list(); var_dump($heroSlider) ?>
     <div id="header-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="public/default/img/carousel-1.jpg" alt="Image">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <?php 
+                $heroSlider = $classheroSlider->heroSlider_list();
+                foreach($heroSlider as $index=>$slider):
+                    // var_dump($slider);
+            ?>
+            <div class="carousel-item <?php if($index == 0){echo 'active';} ?> ">
+            <div class="" style="height:100vh">
+                <img class="w-100 h-100" src="<?php echo $slider['img']?>" alt="Image">
+            </div>
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" >
                     <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
-                        <h1 class="display-3 text-white mb-md-4">Traditional Ice Cream Since 1950</h1>
+                        <h4 class="text-white text-uppercase mb-md-3"><?php echo $slider['title'] ?></h4>
+                        <h1 class="display-3 text-white mb-md-4"><?php echo $slider['description'] ?></h1>
                         <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More hiee</a> -->
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img class="w-100" src="public/default/img/carousel-2.jpg" alt="Image">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
-                        <h1 class="display-3 text-white mb-md-4">Made From Our Own Organic Milk</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
         <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
             <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
