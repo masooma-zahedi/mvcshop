@@ -28,8 +28,8 @@
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
                             <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+                            <p class="mb-2"><?php echo $setting['openHours'] ?></p>
+                            <p class="mb-0"><?php echo $setting['closeHours'] ?></p>
                         </div>
                     </div>
                 </div>
