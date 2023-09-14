@@ -9,14 +9,10 @@ class bestOffer{
     }
     public function bestOffer_list(){
         $sth = $this->db->query("SELECT * FROM bestOfer_tbl");
-        $rows = $sth->fetchAll();
+        $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
         return $rows;
     }
 
-    // public function bestOffer_sub($chid){
-    //     $sth = $this->db->query("SELECT * FROM bestOffer_tbl WHERE id= '$chid'");
-    // }
-    // // working on this*******************************************************************
     public function bestOffer_add($data,$to){
         $this->db->query("INSERT INTO bestOfer_tbl (title,offerBefore,offerAfter,img) VALUES ('$data[title]','$data[offerBefore]','$data[offerAfter]','$to')");
     }

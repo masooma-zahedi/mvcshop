@@ -1,4 +1,5 @@
 <?php
+require_once "controller/CheroSlider.php";
 include_once "controller/Cportfolio.php";
 require_once "controller/Cservices.php";
 require_once "controller/Cclientsay.php";
@@ -6,7 +7,6 @@ require_once "controller/Cemployee.php";
 require_once "controller/Cabout.php";
 require_once "controller/Cvideo.php";
 require_once "controller/Csetting.php";
-require_once "controller/CheroSlider.php";
 require_once "controller/CbestOffer.php";
 ?>
 
@@ -214,6 +214,7 @@ require_once "controller/CbestOffer.php";
                 <div class="owl-carousel product-carousel">
                     <?php 
                         $bestOffer = $classBestOffer-> bestOffer_list();
+                        var_dump($bestOffer);
                         foreach($bestOffer as $offer):
                     ?>
                     <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
